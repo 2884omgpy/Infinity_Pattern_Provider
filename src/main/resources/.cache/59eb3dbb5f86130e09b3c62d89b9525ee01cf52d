@@ -1,0 +1,4 @@
+// 1.20.1	2026-01-23T16:39:44.8598335	Loot Tables
+c1c3baa55375c60a44b436d1144de1b22fa9851d data/infinitypatternprovider/loot_tables/blocks/infinity_pattern_provider.json
+16a7c32bd80255e84bd7c1df5e28ee0f8bdd1ec7 data/infinitypatternprovider/loot_tables/blocks/_1024slots_pattern_provider.json
+80b503a6cf78e07b25cf63d6eff7d41e9ad87a38 data/infinitypatternprovider/loot_tables/blocks/_32slots_pattern_provider.json
