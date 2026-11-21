@@ -47,7 +47,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .define('B', AEItems.LOGIC_PROCESSOR)
                 .define('C', AEItems.CELL_COMPONENT_1K)
                 .define('D', AEItems.SILICON)
-                .unlockedBy("has_pattern_provider", has(AEBlocks.PATTERN_PROVIDER))
+                .unlockedBy("has_1slots_pattern_provider", has(ModBlocks._1SLOTS_PATTERN_PROVIDER.get()))
                 .save(writer, ResourceLocation.fromNamespaceAndPath(InfinityPatternProvider.MOD_ID, "32slots_pattern_provider_blockentity_from_ae2"));
 
         //ME32槽位样板供应器 + 运算处理器 + 16K ME存储组件 + 物质球 -> ME1024槽位样板供应器
@@ -95,7 +95,7 @@ public class ModRecipesProvider extends RecipeProvider implements IConditionBuil
                 .define('B', AEItems.LOGIC_PROCESSOR)
                 .define('C', AEItems.CELL_COMPONENT_1K)
                 .define('D', AEItems.SILICON)
-                .unlockedBy("has_pattern_provider_part", has(AEParts.PATTERN_PROVIDER))
+                .unlockedBy("has_1slots_pattern_provider_part", has(ModItems._1SLOTS_PATTERN_PROVIDER_PART.get()))
                 .save(writer, ResourceLocation.fromNamespaceAndPath(InfinityPatternProvider.MOD_ID, "32slots_pattern_provider_part_from_ae2"));
 
         //ME32槽位样板供应器 + 运算处理器 + 16K ME存储组件 + 物质球 -> ME1024槽位样板供应器
