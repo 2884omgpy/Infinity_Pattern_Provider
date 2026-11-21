@@ -1,0 +1,17 @@
+{
+  "block.infinitypatternprovider._1024slots_pattern_provider": "МЭ 1024 слот поставщик шаблонов",
+  "block.infinitypatternprovider._1slots_pattern_provider": "МЭ 1 слот поставщик шаблонов",
+  "block.infinitypatternprovider._32slots_pattern_provider": "МЭ 32 слот поставщик шаблонов",
+  "block.infinitypatternprovider.infinity_pattern_provider": "МЭ бесконечность поставщик шаблонов",
+  "gui.infinitypatternprovider._1024slots_pattern_provider": "МЭ 1024 слот поставщик шаблонов",
+  "gui.infinitypatternprovider._1slots_pattern_provider": "МЭ 1 слот поставщик шаблонов",
+  "gui.infinitypatternprovider._32slots_pattern_provider": "МЭ 32 слот поставщик шаблонов",
+  "gui.infinitypatternprovider.infinity_pattern_provider": "МЭ бесконечность поставщик шаблонов",
+  "gui.infinitypatternprovider.next_page": "Следующая страница",
+  "gui.infinitypatternprovider.prev_page": "предыдущая страница",
+  "item.infinitypatternprovider._1024slots_pattern_provider_part": "МЭ 1024 слот поставщик шаблонов",
+  "item.infinitypatternprovider._1slots_pattern_provider_part": "МЭ 1 слот поставщик шаблонов",
+  "item.infinitypatternprovider._32slots_pattern_provider_part": "МЭ 32 слот поставщик шаблонов",
+  "item.infinitypatternprovider.infinity_pattern_provider_part": "МЭ бесконечность поставщик шаблонов",
+  "itemGroup.infinity_pattern_provider_creative_tab": "МЭ бесконечность поставщик"
+}

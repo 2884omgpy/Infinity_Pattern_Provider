@@ -1,0 +1,95 @@
+plugins {
+	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+	id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "CurseMaven"
+        url = "https://www.cursemaven.com"
+    }
+
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.dev"
+        content {
+            includeGroup 'appeng'   //AE2
+        }
+    }
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/infinitypatternprovider.accesswidener")
+
+	mods {
+		"infinitypatternprovider" {
+			sourceSet sourceSets.main
+		}
+	}
+
+}
+
+fabricApi {
+	configureDataGeneration {
+		client = true
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.officialMojangMappings()
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    modImplementation "appeng:appliedenergistics2-fabric:${ae2_version}"
+    modImplementation "teamreborn:energy:3.0.0"
+}
+
+processResources {
+    def properties = [
+            "mod_id"          : mod_id,
+            "mod_name"        : mod_name,
+            "mod_version"     : mod_version,
+            "mod_description" : mod_description,
+            "mod_authors"     : mod_authors,
+            "mod_license"     : mod_license,
+            "minecraft_version": minecraft_version,
+            "loader_version"  : loader_version
+    ]
+    inputs.properties properties
+
+    filesMatching("fabric.mod.json") {
+        expand properties
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 17
+}
+
+java {
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${mod_name}" }
+	}
+}
+
+publishing {
+	publications {
+		create("mavenJava", MavenPublication) {
+			from components.java
+		}
+	}
+
+	repositories {
+	}
+}

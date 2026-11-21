@@ -1,0 +1,17 @@
+{
+  "block.infinitypatternprovider._1024slots_pattern_provider": "ME1024슬롯 템플릿 공급기",
+  "block.infinitypatternprovider._1slots_pattern_provider": "ME1슬롯 템플릿 공급기",
+  "block.infinitypatternprovider._32slots_pattern_provider": "ME32슬롯 템플릿 공급기",
+  "block.infinitypatternprovider.infinity_pattern_provider": "ME무한 템플릿 공급기",
+  "gui.infinitypatternprovider._1024slots_pattern_provider": "ME1024슬롯 템플릿 공급기",
+  "gui.infinitypatternprovider._1slots_pattern_provider": "ME1슬롯 템플릿 공급기",
+  "gui.infinitypatternprovider._32slots_pattern_provider": "ME32슬롯 템플릿 공급기",
+  "gui.infinitypatternprovider.infinity_pattern_provider": "ME무한 템플릿 공급기",
+  "gui.infinitypatternprovider.next_page": "다음 페이지",
+  "gui.infinitypatternprovider.prev_page": "이전 페이지",
+  "item.infinitypatternprovider._1024slots_pattern_provider_part": "ME1024슬롯 템플릿 공급기",
+  "item.infinitypatternprovider._1slots_pattern_provider_part": "ME1슬롯 템플릿 공급기",
+  "item.infinitypatternprovider._32slots_pattern_provider_part": "ME32슬롯 템플릿 공급기",
+  "item.infinitypatternprovider.infinity_pattern_provider_part": "ME무한 템플릿 공급기",
+  "itemGroup.infinity_pattern_provider_creative_tab": "ME무한 템플릿 공급기"
+}

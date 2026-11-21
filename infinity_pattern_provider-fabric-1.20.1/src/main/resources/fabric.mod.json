@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+    "id": "${mod_id}",
+    "accessWidener": "infinitypatternprovider.accesswidener",
+    "version": "${mod_version}",
+    "name": "${mod_name}",
+    "description": "${mod_description}",
+    "authors": ["${mod_authors}"],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+    "license": "${mod_license}",
+	"icon": "assets/${mod_id}/icon.png",
+	"environment": "*",
+	"entrypoints":
+    {
+      "main": ["com._2884omgpy.infinitypatternprovider.InfinityPatternProvider"],
+      "client": ["com._2884omgpy.infinitypatternprovider.client.InfinityPatternProviderClient"]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

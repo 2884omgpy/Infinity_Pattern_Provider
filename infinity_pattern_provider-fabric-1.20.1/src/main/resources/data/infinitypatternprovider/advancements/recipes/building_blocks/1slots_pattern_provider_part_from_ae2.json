@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pattern_provider_part": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "ae2:cable_pattern_provider"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "infinitypatternprovider:1slots_pattern_provider_part_from_ae2"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_pattern_provider_part",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "infinitypatternprovider:1slots_pattern_provider_part_from_ae2"
+    ]
+  },
+  "sends_telemetry_event": false
+}

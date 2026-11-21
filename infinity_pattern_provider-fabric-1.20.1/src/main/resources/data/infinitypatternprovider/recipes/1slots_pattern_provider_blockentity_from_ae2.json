@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 9,
+  "ingredient": {
+    "item": "ae2:pattern_provider"
+  },
+  "result": "infinitypatternprovider:_1slots_pattern_provider"
+}
