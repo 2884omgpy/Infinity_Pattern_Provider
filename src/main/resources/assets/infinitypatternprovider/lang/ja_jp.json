@@ -1,0 +1,17 @@
+{
+  "block.infinitypatternprovider._1024slots_pattern_provider": "ME1024スロットパターンプロバイダー",
+  "block.infinitypatternprovider._1slots_pattern_provider": "ME1スロットパターンプロバイダー",
+  "block.infinitypatternprovider._32slots_pattern_provider": "ME32スロットパターンプロバイダー",
+  "block.infinitypatternprovider.infinity_pattern_provider": "ME無限スロットパターンプロバイダー",
+  "gui.infinitypatternprovider._1024slots_pattern_provider": "ME1024スロットパターンプロバイダー",
+  "gui.infinitypatternprovider._1slots_pattern_provider": "ME1スロットパターンプロバイダー",
+  "gui.infinitypatternprovider._32slots_pattern_provider": "ME32スロットパターンプロバイダー",
+  "gui.infinitypatternprovider.infinity_pattern_provider": "ME無限スロットパターンプロバイダー",
+  "gui.infinitypatternprovider.next_page": "次ページ",
+  "gui.infinitypatternprovider.prev_page": "前のページ",
+  "item.infinitypatternprovider._1024slots_pattern_provider_part": "ME1024スロットパターンプロバイダー",
+  "item.infinitypatternprovider._1slots_pattern_provider_part": "ME1スロットパターンプロバイダー",
+  "item.infinitypatternprovider._32slots_pattern_provider_part": "ME32スロットパターンプロバイダー",
+  "item.infinitypatternprovider.infinity_pattern_provider_part": "ME無限スロットパターンプロバイダー",
+  "itemGroup.infinity_pattern_provider_creative_tab": "ME無限スロットパターンプロバイダー"
+}

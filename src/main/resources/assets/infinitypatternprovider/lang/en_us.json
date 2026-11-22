@@ -1,0 +1,17 @@
+{
+  "block.infinitypatternprovider._1024slots_pattern_provider": "1024slots pattern provider",
+  "block.infinitypatternprovider._1slots_pattern_provider": "1slots pattern provider",
+  "block.infinitypatternprovider._32slots_pattern_provider": "32slots pattern provider",
+  "block.infinitypatternprovider.infinity_pattern_provider": "infinity pattern provider",
+  "gui.infinitypatternprovider._1024slots_pattern_provider": "1024slots pattern provider",
+  "gui.infinitypatternprovider._1slots_pattern_provider": "1slots pattern provider",
+  "gui.infinitypatternprovider._32slots_pattern_provider": "32slots pattern provider",
+  "gui.infinitypatternprovider.infinity_pattern_provider": "infinity pattern provider",
+  "gui.infinitypatternprovider.next_page": "next page",
+  "gui.infinitypatternprovider.prev_page": "prev page",
+  "item.infinitypatternprovider._1024slots_pattern_provider_part": "1024slots pattern provider",
+  "item.infinitypatternprovider._1slots_pattern_provider_part": "1slots pattern provider",
+  "item.infinitypatternprovider._32slots_pattern_provider_part": "32slots pattern provider",
+  "item.infinitypatternprovider.infinity_pattern_provider_part": "infinity pattern provider",
+  "itemGroup.infinity_pattern_provider_creative_tab": "infinity pattern provider"
+}

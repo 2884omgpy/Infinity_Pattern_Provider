@@ -1,0 +1,8 @@
+{
+  "values": [
+    "infinitypatternprovider:_1slots_pattern_provider",
+    "infinitypatternprovider:_32slots_pattern_provider",
+    "infinitypatternprovider:_1024slots_pattern_provider",
+    "infinitypatternprovider:infinity_pattern_provider"
+  ]
+}

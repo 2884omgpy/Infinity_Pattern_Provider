@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "infinitypatternprovider:block/_32slots_pattern_provider",
+    "down": "infinitypatternprovider:block/_32slots_pattern_provider_alternate",
+    "up": "infinitypatternprovider:block/_32slots_pattern_provider_alternate_front",
+    "north": "infinitypatternprovider:block/_32slots_pattern_provider_alternate_arrow",
+    "south": "infinitypatternprovider:block/_32slots_pattern_provider_alternate_arrow",
+    "east": "infinitypatternprovider:block/_32slots_pattern_provider_alternate_arrow",
+    "west": "infinitypatternprovider:block/_32slots_pattern_provider_alternate_arrow"
+  }
+}
