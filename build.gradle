@@ -1,0 +1,162 @@
+plugins {
+    id 'java-library'
+    id 'maven-publish'
+    id 'net.neoforged.gradle.userdev' version '7.1.25'
+}
+
+tasks.named('wrapper', Wrapper).configure {
+    distributionType = Wrapper.DistributionType.BIN
+}
+
+version = mod_version
+group = mod_group_id
+
+sourceSets.main.resources {
+    srcDir('src/generated/resources')
+
+    exclude("**/*.bbmodel")
+    exclude("src/generated/**/.cache")
+}
+
+// NeoGradle 在被 apply 时会自动往 repositories 里加几个仓库，其中
+//   https://maven.neoforged.net/releases/   ← 国内被 DNS 污染，连接必然超时
+//   https://libraries.minecraft.net/        ← Mojang 库，必须保留
+// Gradle 遇到“连接超时”这种 IO 错误不会跳到下一个仓库，而是直接判失败，
+// 所以这里在该仓库被加入时，把域名改写成 NeoForged 官方 CDN 镜像（内容与官方 maven 同构）。
+//
+// 注意：不要用 repositories.clear()——那会把 libraries.minecraft.net 一起清掉，
+// 导致 "Could not find com.mojang:authlib" / "ng_dummy_ng.net.minecraft:client" 之类的错误。
+repositories.configureEach { repo ->
+    try {
+        def u = repo.url.toString()
+        if (u.contains('maven.neoforged.net')) {
+            repo.url = u.replace('maven.neoforged.net', 'neoforged.forgecdn.net')
+        }
+    } catch (ignored) {
+        // 非 Maven 仓库没有 url，忽略
+    }
+}
+
+repositories
+{
+    maven
+    {
+        name = "NeoForgedCdn";
+        url = "https://neoforged.forgecdn.net/releases"
+    }
+
+    // Mojang 官方库仓库：com.mojang:authlib / brigadier / datafixerupper 等都在这里。
+    // 正常情况下 NeoGradle 会自己加，但一旦被误删（比如 repositories.clear()）就会
+    // 报 "Could not find com.mojang:authlib:6.0.54"，所以这里显式声明一次。
+    maven
+    {
+        name = "MojangLibraries";
+        url = "https://libraries.minecraft.net"
+    }
+
+    maven
+    {
+        name = "CurseMaven";
+        url = "https://cursemaven.com"
+    }
+
+    maven
+    {
+        name = "ModMaven";
+        url = "https://modmaven.dev"
+    }
+
+    mavenCentral()
+}
+
+base {
+    archivesName = "infinity_pattern_provider-${mod_version}"
+}
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+minecraft {
+    accessTransformers {
+        file('src/main/resources/META-INF/accesstransformer.cfg')
+    }
+}
+
+runs {
+
+    configureEach {
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+        systemProperty 'forge.logging.console.level', 'debug'
+        workingDirectory project.layout.projectDirectory.dir('run').dir(name)
+        modSource project.sourceSets.main
+    }
+
+    client {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+    }
+
+    server {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+        argument '--nogui'
+    }
+
+    gameTestServer {
+        systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+    }
+
+    data {
+        arguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+    }
+}
+
+configurations {
+    runtimeClasspath.extendsFrom localRuntime
+}
+
+dependencies {
+    implementation "net.neoforged:neoforge:${neo_version}"
+
+    implementation "curse.maven:guideme-1173950:7127444"
+    implementation "curse.maven:applied-energistics-2-223794:7027323"
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+            minecraft_version      : minecraft_version,
+            minecraft_version_range: minecraft_version_range,
+            neo_version            : neo_version,
+            loader_version_range   : loader_version_range,
+            mod_id                 : mod_id,
+            mod_name               : mod_name,
+            mod_license            : mod_license,
+            mod_version            : mod_version,
+    ]
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml']) {
+        expand replaceProperties
+    }
+}
+
+publishing {
+    publications {
+        register('mavenJava', MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url "file://${project.projectDir}/repo"
+        }
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

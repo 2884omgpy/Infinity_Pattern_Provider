@@ -1,0 +1,17 @@
+{
+  "block.infinitypatternprovider._1024slots_pattern_provider": "ME1024槽位样板供应器",
+  "block.infinitypatternprovider._1slots_pattern_provider": "ME1槽位样板供应器",
+  "block.infinitypatternprovider._32slots_pattern_provider": "ME32槽位样板供应器",
+  "block.infinitypatternprovider.infinity_pattern_provider": "ME无限样板供应器",
+  "gui.infinitypatternprovider._1024slots_pattern_provider": "ME1024槽位样板供应器",
+  "gui.infinitypatternprovider._1slots_pattern_provider": "ME1槽位样板供应器",
+  "gui.infinitypatternprovider._32slots_pattern_provider": "ME32槽位样板供应器",
+  "gui.infinitypatternprovider.infinity_pattern_provider": "ME无限样板供应器",
+  "gui.infinitypatternprovider.next_page": "下一页",
+  "gui.infinitypatternprovider.prev_page": "上一页",
+  "item.infinitypatternprovider._1024slots_pattern_provider_part": "ME1024槽位样板供应器",
+  "item.infinitypatternprovider._1slots_pattern_provider_part": "ME1槽位样板供应器",
+  "item.infinitypatternprovider._32slots_pattern_provider_part": "ME32槽位样板供应器",
+  "item.infinitypatternprovider.infinity_pattern_provider_part": "ME无限样板供应器",
+  "itemGroup.infinity_pattern_provider_creative_tab": "ME无限样板供应器"
+}
