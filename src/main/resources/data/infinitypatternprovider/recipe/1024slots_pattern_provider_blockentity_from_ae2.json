@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "A": {
-      "item": "infinitypatternprovider:_32slots_pattern_provider"
-    },
-    "B": {
-      "item": "ae2:calculation_processor"
-    },
-    "C": {
-      "item": "ae2:cell_component_16k"
-    },
-    "D": {
-      "item": "ae2:matter_ball"
-    }
+    "A": "infinitypatternprovider:_32slots_pattern_provider",
+    "B": "ae2:calculation_processor",
+    "C": "ae2:cell_component_16k",
+    "D": "ae2:matter_ball"
   },
   "pattern": [
     "AB",

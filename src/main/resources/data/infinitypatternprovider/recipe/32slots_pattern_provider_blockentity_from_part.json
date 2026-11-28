@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "infinitypatternprovider:_32slots_pattern_provider_part"
-    }
+    "infinitypatternprovider:_32slots_pattern_provider_part"
   ],
   "result": {
     "count": 1,

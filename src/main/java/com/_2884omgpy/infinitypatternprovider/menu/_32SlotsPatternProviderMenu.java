@@ -15,14 +15,10 @@ import java.util.List;
 
 public class _32SlotsPatternProviderMenu extends PatternProviderMenu
 {
-    public static MenuType<_32SlotsPatternProviderMenu> TYPE;
+    public static MenuType<_32SlotsPatternProviderMenu> TYPE = MenuTypeBuilder.create(_32SlotsPatternProviderMenu::new, PatternProviderLogicHost.class).buildUnregistered(Identifier.fromNamespaceAndPath(InfinityPatternProvider.MOD_ID, "_32slots_pattern_provider"));
 
     private List<AppEngSlot> patternSlots;
 
-    public static void init()
-    {
-        TYPE = MenuTypeBuilder.create(_32SlotsPatternProviderMenu::new, PatternProviderLogicHost.class).buildUnregistered(Identifier.fromNamespaceAndPath(InfinityPatternProvider.MOD_ID, "_32slots_pattern_provider"));
-    }
 
     public _32SlotsPatternProviderMenu(int id, Inventory playerInventory, PatternProviderLogicHost host)
     {
