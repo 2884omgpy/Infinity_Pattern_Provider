@@ -13,14 +13,6 @@ import java.util.function.Supplier;
 
 public class ModMenus
 {
-    static
-    {
-        _1SlotsPatternProviderMenu.init();
-        _32SlotsPatternProviderMenu.init();
-        _1024SlotsPatternProviderMenu.init();
-        InfinityPatternProviderMenu.init();
-    }
-
     public static final DeferredRegister<MenuType<?>> MENU_TYPES =  DeferredRegister.create(Registries.MENU, InfinityPatternProvider.MOD_ID);
 
     public static final Supplier<MenuType<_1SlotsPatternProviderMenu>> _1SLOTS_PATTERN_PROVIDER = MENU_TYPES.register("_1slots_pattern_provider", () -> _1SlotsPatternProviderMenu.TYPE);

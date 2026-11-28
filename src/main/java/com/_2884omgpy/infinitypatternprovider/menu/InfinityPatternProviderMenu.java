@@ -13,14 +13,9 @@ import java.util.List;
 
 public class InfinityPatternProviderMenu extends PatternProviderMenu
 {
-    public static MenuType<InfinityPatternProviderMenu> TYPE;
+    public static MenuType<InfinityPatternProviderMenu> TYPE = MenuTypeBuilder.create(InfinityPatternProviderMenu::new, PatternProviderLogicHost.class).build("infinity_pattern_provider");
 
     private List<AppEngSlot> patternSlots;
-
-    public static void init()
-    {
-        TYPE = MenuTypeBuilder.create(InfinityPatternProviderMenu::new, PatternProviderLogicHost.class).build("infinity_pattern_provider");
-    }
 
     public InfinityPatternProviderMenu(int id, Inventory playerInventory, PatternProviderLogicHost host)
     {

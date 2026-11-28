@@ -8,12 +8,7 @@ import net.minecraft.world.inventory.MenuType;
 
 public class _1SlotsPatternProviderMenu extends PatternProviderMenu
 {
-    public static MenuType<_1SlotsPatternProviderMenu> TYPE;
-
-    public static void init()
-    {
-        TYPE = MenuTypeBuilder.create(_1SlotsPatternProviderMenu::new, PatternProviderLogicHost.class).build("_1slots_pattern_provider");
-    }
+    public static MenuType<_1SlotsPatternProviderMenu> TYPE = MenuTypeBuilder.create(_1SlotsPatternProviderMenu::new, PatternProviderLogicHost.class).build("_1slots_pattern_provider");
 
     public _1SlotsPatternProviderMenu(int id, Inventory playerInventory, PatternProviderLogicHost host)
     {
